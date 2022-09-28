@@ -17,7 +17,7 @@
     <header class="header page-header">
         <div class="container main-header">
         <nav class="header-nav">
-            <a href="index.html" lang="en" class="logo logo-header link"> <span class="logo-color">Web</span>Studio </a>
+            <a href="index.html" lang="en" class="logo logo-header link"> <span class="logo-color">Web</span>Studio</span> </a>
             <ul class="header-list list">
                 <li class="item"><a href="index.html" class="nav-link link current"> Студія </a> </li>
                 <li class="item"><a href="portfolio.html" class="nav-link link"> Портфоліо </a> </li>
@@ -40,7 +40,14 @@
         <!-- hero section-->
         <section class="hero overlay">
                 <h1 class="hero-title"> Ефективні рішення для вашого бізнесу </h1>
-                <button class="button button-studio" type="button"> Замовити послугу </button>
+                <button class="button button-studio" type="button" data-modal-open> Замовити послугу </button>
+                <div class="backdrop is-hidden" data-modal> 
+                    <div class="modal"> 
+                        <button data-modal-close class="icon-button"> <svg class="hero-button">
+                            <use  href="./images/icons.svg#icon-close"> </use>
+                        </svg> </button>
+                    </div>
+                </div>
         </section>
            
         <!-- feature section-->
@@ -98,9 +105,22 @@
             <h2 class="title title-section"> Чим ми займаємося </h2>
 
             <ul class="list example-section">
-                <li> <img src="./images/studio/what_we_do/box1/box1.jpg" alt="програмування" width="370"> </li>
-                <li> <img src="./images/studio/what_we_do/box2/box2.jpg" alt="веб-дизайн" width="370"> </li>
-                <li> <img src="./images/studio/what_we_do/box3/box3.jpg" alt="створення веб-продуктів" width="370">
+                <li class="example-list"> 
+                    <div class="card-thumb"> 
+                        <img src="./images/studio/what_we_do/box1/box1.jpg" alt="програмування" width="370"> 
+                        <div class="example-thumb first-thumb">
+                            <p class="text-thumb">Десктопні додатки</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="example-list"> <img src="./images/studio/what_we_do/box2/box2.jpg" alt="веб-дизайн" width="370">   
+                    <div class="example-thumb second-thumb">
+                        <p class="text-thumb">Мобільні додатки</p>
+                    </div> </li>
+                <li class="example-list"> <img src="./images/studio/what_we_do/box3/box3.jpg" alt="створення веб-продуктів" width="370">
+                    <div class="example-thumb last-thumb">
+                        <p class="text-thumb">Дизайнерські рішення</p>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -368,7 +388,7 @@
             </div>
        </div>
     </footer>
-
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
